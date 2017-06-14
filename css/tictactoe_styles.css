@@ -34,3 +34,13 @@ TABLE{
     height: auto;
     margin-left: 50px;
 }
+.ocupado{
+    background-image: url("../img/tache.png");
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+}
+.ocupado2{
+    background-image: url("../img/bola.png");
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+}

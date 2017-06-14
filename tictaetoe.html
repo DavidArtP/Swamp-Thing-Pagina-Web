@@ -11,87 +11,152 @@
 
             <table>
                 <tr>
-                    <td class="td_s_i" id="1si"></td>
-                     <td class="td_m_ab" id="1sm"></td>
-                      <td class="td_i_ab" id="1sd"></td>
+                    <td class="td_s_i" id="1si" name="x"></td>
+                     <td class="td_m_ab" id="1sm" name="x"></td>
+                      <td class="td_i_ab" id="1sd" name="x"></td>
                 </tr>
                  <tr>
-                    <td class="td_s_i" id="1mi"></td>
-                     <td class="td_m_ab" id="1mm"></td>
-                      <td class="td_i_ab" id="1md"></td>
+                    <td class="td_s_i" id="1mi" name="x"></td>
+                     <td class="td_m_ab" id="1mm" name="x"></td>
+                      <td class="td_i_ab" id="1md" name="x"></td>
                 </tr>
                  <tr>
-                    <td class="td_i" id="1ii"> </td>
-                     <td id="1im"> </td>
-                      <td class="td_d" id="1id"> </td>
+                    <td class="td_i" id="1ii" name="x"> </td>
+                     <td id="1im" name="x"> </td>
+                      <td class="td_d" id="1id" name="x"> </td>
                 </tr>
             </table>
+            <button type="button" class="btn btn-default" onclick="recargar();">Recargar
+            </button>
                 </div>
             </div>
             <script>
+                $(document).ready(function(){
+                    var turno=0;
+              
                 $("#1si").click(function(e){
                     if ($("#1si").hasClass("ocupado")){
-                        alert("ocupado");
                     }else{
-                        alert("no ocupado")
-                    }
+                        if(turno==0){
+                            turno=1;
+                             $("#1si").addClass("ocupado");
+                        }else{
+                            turno=0;
+                            $("#1si").addClass("ocupado2")
+                        }
+                       }
                 });
-                 $("#1sm").click(function(e){
+
+                $("#1sm").click(function(e){
                     if ($("#1sm").hasClass("ocupado")){
-                        alert("ocupado");
                     }else{
-                        alert("no ocupado")
-                    }
+                        if(turno==0){
+                             turno=1;
+                             $("#1sm").addClass("ocupado");
+                        }else{
+                             turno=0;
+                            $("#1sm").addClass("ocupado2")
+                        }
+                       }
                 });
-                 $("#1sd").click(function(e){
+
+                $("#1sd").click(function(e){
                     if ($("#1sd").hasClass("ocupado")){
-                        alert("ocupado");
                     }else{
-                        alert("no ocupado")
-                    }
+                        if(turno==0){
+                             turno=1;
+                             $("#1sd").addClass("ocupado");
+                        }else{
+                             turno=0;
+                            $("#1sd").addClass("ocupado2")
+                        }
+                       }
                 });
-                 $("#1mi").click(function(e){
+
+                $("#1mi").click(function(e){
                     if ($("#1mi").hasClass("ocupado")){
-                        alert("ocupado");
                     }else{
-                        alert("no ocupado")
-                    }
+                        if(turno==0){
+                             turno=1;
+                             $("#1mi").addClass("ocupado");
+                        }else{
+                             turno=0;
+                            $("#1mi").addClass("ocupado2")
+                        }
+                       }
                 });
-                 $("#1mm").click(function(e){
+
+                $("#1mm").click(function(e){
                     if ($("#1mm").hasClass("ocupado")){
-                        alert("ocupado");
                     }else{
-                        alert("no ocupado")
-                    }
+                        if(turno==0){
+                             turno=1;
+                             $("#1mm").addClass("ocupado");
+                        }else{
+                             turno=0;
+                            $("#1mm").addClass("ocupado2")
+                        }
+                       }
                 });
-                 $("#1md").click(function(e){
+
+                $("#1md").click(function(e){
                     if ($("#1md").hasClass("ocupado")){
-                        alert("ocupado");
                     }else{
-                        alert("no ocupado")
-                    }
+                        if(turno==0){
+                             turno=1;
+                             $("#1md").addClass("ocupado");
+                        }else{
+                             turno=0;
+                            $("#1md").addClass("ocupado2")
+                        }
+                       }
                 });
-                 $("#1ii").click(function(e){
+
+                $("#1ii").click(function(e){
                     if ($("#1ii").hasClass("ocupado")){
-                        alert("ocupado");
                     }else{
-                        alert("no ocupado")
-                    }
+                        if(turno==0){
+                             turno=1;
+                             $("#1ii").addClass("ocupado");
+                        }else{
+                             turno=0;
+                            $("#1ii").addClass("ocupado2")
+                        }
+                       }
                 });
-                 $("#1im").click(function(e){
+
+                $("#1im").click(function(e){
                     if ($("#1im").hasClass("ocupado")){
-                        alert("ocupado");
                     }else{
-                        alert("no ocupado")
-                    }
+                        if(turno==0){
+                             turno=1;
+                             $("#1im").addClass("ocupado");
+                        }else{
+                             turno=0;
+                            $("#1im").addClass("ocupado2")
+                        }
+                       }
                 });
-                 $("#1id").click(function(e){
+
+                $("#1id").click(function(e){
                     if ($("#1id").hasClass("ocupado")){
-                        alert("ocupado");
                     }else{
-                        alert("no ocupado")
-                    }
+                        if(turno==0){
+                             turno=1;
+                             $("#1id").addClass("ocupado");
+                        }else{
+                             turno=0;
+                            $("#1id").addClass("ocupado2")
+                        }
+                       }
                 });
-            </script>
+            });
+            function recargar(){
+                    turno=0;
+                $("td[name=x]").removeClass("ocupado");
+                $("td[name=x]").removeClass("ocupado2");
+                }
+
+            </script> 
         </body>
 </html>
