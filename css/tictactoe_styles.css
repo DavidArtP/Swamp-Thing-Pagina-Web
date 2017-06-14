@@ -1,0 +1,36 @@
+.td_s_i{
+    width: 150px;
+    height: 150px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    
+}
+.td_m_ab{
+    width: 150px;
+    height: 150px;
+    border-bottom: 2px solid black;
+}
+.td_i_ab{
+    width: 150px;
+    height: 150px;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+.td_i{
+    width: 150px;
+    height: 150px;
+    border-right: 2px solid black;
+}
+ .td_d{
+    width: 150px;
+    height: 150px;
+    border-left: 2px solid black;
+    }
+.fondo{
+    background: rebeccapurple
+}
+TABLE{
+    width: auto;
+    height: auto;
+    margin-left: 50px;
+}
