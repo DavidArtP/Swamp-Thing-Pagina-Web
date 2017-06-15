@@ -35,7 +35,7 @@
                      $turno=0;
                      $arraytablero = [true,true,true,true,true,true,true,true,true];
                     $("#1").click(function(e){
-                        if ($("#1").hasClass("ocupado")){
+                        if ($("#1").hasClass("ocupado") || $("#1").hasClass("ocupado2")){
                         }else{
                             if($turno==0){
                                 $turno=1;
@@ -50,7 +50,7 @@
                     });
 
                     $("#2").click(function(e){
-                        if ($("#2").hasClass("ocupado")){
+                        if ($("#2").hasClass("ocupado") || $("#2").hasClass("ocupado2")){
                         }else{
                             if($turno==0){
                                 $turno=1;
@@ -65,7 +65,7 @@
                     });
 
                     $("#3").click(function(e){
-                        if ($("#3").hasClass("ocupado")){
+                        if ($("#3").hasClass("ocupado") || $("#3").hasClass("ocupado2")){
                         }else{
                             if($turno==0){
                                 $turno=1;
@@ -80,7 +80,7 @@
                     });
 
                     $("#4").click(function(e){
-                        if ($("#4").hasClass("ocupado")){
+                        if ($("#4").hasClass("ocupado")|| $("#4").hasClass("ocupado2")){
                         }else{
                             if($turno==0){
                                 $turno=1;
@@ -95,7 +95,7 @@
                     });
 
                     $("#5").click(function(e){
-                        if ($("#5").hasClass("ocupado")){
+                        if ($("#5").hasClass("ocupado") || $("#5").hasClass("ocupado2")){
                         }else{
                             if($turno==0){
                                 $turno=1;
@@ -110,7 +110,7 @@
                     });
 
                     $("#6").click(function(e){
-                        if ($("#6").hasClass("ocupado")){
+                        if ($("#6").hasClass("ocupado") || $("#6").hasClass("ocupado2")){
                         }else{
                             if($turno==0){
                                 $turno=1;
@@ -125,7 +125,7 @@
                     });
 
                     $("#7").click(function(e){
-                        if ($("#7").hasClass("ocupado")){
+                        if ($("#7").hasClass("ocupado") || $("7").hasClass("ocupado2")){
                         }else{
                             if($turno==0){
                                 $turno=1;
@@ -140,7 +140,7 @@
                     });
 
                     $("#8").click(function(e){
-                        if ($("#8").hasClass("ocupado")){
+                        if ($("#8").hasClass("ocupado") || $("#8").hasClass("ocupado2")){
                         }else{
                             if($turno==0){
                                 $turno=1;
@@ -176,7 +176,8 @@
                     $arraytablero = [true,true,true,true,true,true,true,true,true];
                 }
             function maquina(){
-                for(var i=0;i<$arraytablero.length;i++){
+                for(var i=0;i<$arraytablero.length;i++)
+                {
                     if($arraytablero[4]){
                         $arraytablero[4]=false;
                         $("#5").addClass("ocupado2");
@@ -187,16 +188,22 @@
                             $("#9").addClass("ocupado2");
                             break;  
                         }else{
-                            if($arraytablero[i]){
-                                var num=i+1;
-                                $("#"+num).addClass("ocupado2");
-                                $arraytablero[i]=false;
+                            if($arraytablero[4] && $arraytablero[8]){
+                                $arraytablero[0]=true
+                                $("#1").addClass("ocupado2");
                                 break;
+                            }else{
+                                if($arraytablero[i]){
+                                    var num=i+1;
+                                    $("#"+num).addClass("ocupado2");
+                                    $arraytablero[i]=false;
+                                    break;
+                                }    
                             }
                         }
                     }
                 }
-                 $turno=0;
+                $turno=0;
                 return $arraytablero;
             }
             </script> 
